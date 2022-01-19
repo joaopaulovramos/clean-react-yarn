@@ -1,25 +1,31 @@
-// 20220119125725
-// https://raw.githubusercontent.com/microsoft/TypeScript-React-Starter/master/tsconfig.json
-
 {
   "compilerOptions": {
     "outDir": "build/dist",
-    "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "lib": [
-      "es6",
-      "dom"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
+    "esModuleInterop": true,
+    "module": "esnext",
+    "baseUrl": "src",
+    "allowJs": true, 
     "sourceMap": true,
-    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
     "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
     "node_modules",
     "build",
