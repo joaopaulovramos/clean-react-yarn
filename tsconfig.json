@@ -1,7 +1,7 @@
+// 20210416171251
 {
   "compilerOptions": {
-    "outDir": "build/dist",
-    "target": "es6",
+    "target": "es2020",
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,33 +9,17 @@
     ],
     "esModuleInterop": true,
     "module": "esnext",
-    "baseUrl": "src",
-    "allowJs": true, 
-    "sourceMap": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react",
     "moduleResolution": "node",
+    "jsx": "react",
     "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "allowJs": true,
+    "resolveJsonModule": true
   },
   "include": [
     "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
-  ],
-  "types": [
-    "typePatches"
   ]
 }
