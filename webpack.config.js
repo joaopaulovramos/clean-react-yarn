@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: './src/main/main.tsx',
+  entry: './src/main/index.tsx',
   output: {
     path: path.join(__dirname, 'public/js'),
     publicPath: 'public/js',
@@ -17,10 +17,16 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.ts(x?)$/,
-      loader: 'ts-loader',
-      exclude: /'node_modules'/
-    }, {
+      test: /\.ts(x)?$/,
+      use: [{
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true
+        }
+      }
+      ]
+    },
+    {
       test: /\.scss$/,
       use: [
         {
@@ -39,8 +45,10 @@ module.exports = {
     }]
   },
   devServer: {
-    contentBase: './public',
-    writeToDisk: true,
+    devMiddleware: {
+      writeToDisk: true
+    },
+    static: './public',
     historyApiFallback: true
   },
   externals: {

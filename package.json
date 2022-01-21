@@ -10,7 +10,8 @@
     "test:staged": "yarn test --findRelatedTests",
     "test:ci": "yarn test --coverage",
     "lint": "lint-staged",
-    "check": "npm-check -u -s"
+    "check": "npm-check -u -s",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +31,7 @@
     "@types/react-dom": "^17.0.11",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "eslint": "^8.7.0",
@@ -53,6 +55,7 @@
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.3",
+    "webpack-node-externals": "^3.0.0",
     "yarn-upgrade-all": "^0.6.1"
   },
   "lint-staged": {
