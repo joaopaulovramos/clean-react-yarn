@@ -1,0 +1,36 @@
+@import '../../styles/colors.scss';
+
+.inputWrap {
+  margin-top: 1rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  input {
+    flex-grow: 1;
+  }
+
+  input[type="password"], 
+  input[type="email"] {
+    border: 1px solid $primaryLight;
+    line-height: 3rem;
+    border-radius: 0.4rem;
+    padding: 0 2.5rem 0 .5rem;
+  
+  &:last-of-type{
+    margin-top: 1rem;
+
+  }
+
+  &:focus {
+    outline-color: $primaryLight;
+  }
+}
+
+  .status {
+    position: absolute;
+    right: .5rem;
+    font-size: 0.75rem;
+    cursor: help;
+  }
+}
