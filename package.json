@@ -5,21 +5,16 @@
   "main": ".eslintrc.js",
   "scripts": {
     "start": "webpack-dev-server --open",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests",
     "test:ci": "yarn test --coverage",
-    "lint": "lint-staged",
     "check": "npm-check -u -s",
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jpvramos/clean-react/issues"
-  },
-  "homepage": "https://github.com/jpvramos/clean-react#readme",
   "devDependencies": {
     "@faker-js/faker": "^6.0.0-alpha.3",
     "@testing-library/react": "^12.1.2",
@@ -57,12 +52,6 @@
     "webpack-dev-server": "^4.7.3",
     "webpack-node-externals": "^3.0.0",
     "yarn-upgrade-all": "^0.6.1"
-  },
-  "lint-staged": {
-    "*.{ts, tsx}": [
-      "eslint 'src/**' --fix",
-      "npm run test:staged"
-    ]
   },
   "dependencies": {
     "axios": "^0.25.0",
