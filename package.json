@@ -3,22 +3,17 @@
   "version": "1.1.0",
   "description": "",
   "main": ".eslintrc.js",
+  "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open",
     "lint": "eslint .",
-    "lint:fix": "yarn lint -- --fix",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests",
     "test:ci": "yarn test --coverage",
     "check": "npm-check -u -s",
     "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint 'src/**' --fix",
-      "yarn test:staged"
-    ]
   },
   "keywords": [],
   "devDependencies": {
@@ -58,6 +53,12 @@
     "webpack-dev-server": "^4.7.3",
     "webpack-node-externals": "^3.0.0",
     "yarn-upgrade-all": "^0.6.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint 'src/**' --fix",
+      "npm run test:staged"
+    ]
   },
   "dependencies": {
     "axios": "^0.25.0",
