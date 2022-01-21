@@ -1,3 +1,5 @@
 nodes_modules
 .vscode
 coverage
+*.scss
+public
