@@ -18,6 +18,7 @@ module.exports = {
     '@typescript-eslint/comma-spacing': 'off',
     '@typescript-eslint/return-await': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error'
   }
